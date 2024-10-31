@@ -1,0 +1,144 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+#sidebar {
+	grid-area: sidebar;
+	overflow-y: scroll;
+}
+
+#content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.sideBarItem{
+	max-height: 50px;
+	max-width: 50px;
+	padding:5px;
+}
+
+.sideBarItem img{
+	max-height: 50px;
+	max-Width:50px;
+}
+
+.colourPalette{
+	grid-area: colourP;
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+}
+
+.options{
+	grid-area: options;
+	padding: 15px;
+}
+
+.colourSwatches{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+
+	.wrapper {
+		display: grid;
+		height: 100%;
+		grid-template-columns: 70px 230px  minmax(500px, 1fr);
+		grid-template-rows: 35px minmax(500px, 1fr) 160px;
+		grid-template-areas:
+               "header header header"
+				"sidebar content content"
+                "colourP colourP options";
+		background-color: #fff;
+		color: #444;
+	}
+.box {
+  background-color: #444;
+  color: #fff;
+  font-size: 150%;
+}
+
+.header {
+  background-color: #999;
+}
+/* 
+.tools-row h5 {
+	margin-bottom: 10px;
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 18px;
+	letter-spacing: 0.5px;
+}
+.tools-row button {
+	padding: 12px 0;
+	border-radius: 25px;
+	border: none;
+	background-color: #ffffff;
+	font-size: 18px;
+	color: #788eff;
+}
+input[type="range"] {
+  height: 40px;
+}
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 70px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 8px;
+  border: 3px solid #000000;
+}
+input[type="color"]::moz-color-swatch {
+  border-radius: 8px;
+  border: 3px solid #000000;
+} */
+
+.options {
+    background-color: #333;
+    box-shadow: 0px 0px 10px rgba(30, 30, 30, 0.7);
+    color: #fff;
+    left: 0;
+    top: 0;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.options ul {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.options ul li {
+    padding: 5px 0;
+}
+
+.options label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 3px;
+}
